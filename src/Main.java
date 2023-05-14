@@ -13,18 +13,11 @@ public class Main {
 
     public static void task1 () {
         System.out.println("Задача 1");
-        int age = 17;
-        int age2 = 19;
+        int age = 19;
         if (age>=18){
             System.out.println("Если возраст человека равен "+age+", то он совершеннолетний");
         } else {
             System.out.println("Если возраст человека равен "+age+", то он не достиг совершеннолетия, нужно немного подождать");
-        }
-
-        if (age2>=18){
-            System.out.println("Если возраст человека равен "+age2+", то он совершеннолетний");
-        } else {
-            System.out.println("Если возраст человека равен "+age2+", то он не достиг совершеннолетия, нужно немного подождать");
         }
 
     }
@@ -97,28 +90,20 @@ public class Main {
 
     public static void task5 () {
         System.out.println("Задача 5");
-        int age = 4;
-        int age2 = 6;
-        int age3 = 15;
+        int age = 15;
 
-        if (age == 0) {
-            System.out.println("Не может такого быть");
-        }
-        else if (age > 0) {
-
-
-            if (age < 5) {
+           if (age < 5) {
                 System.out.println("Если возраст ребенка равен " + age + ", то ему нельзя кататься на аттракционе");
             }
-            if (age2 >= 5 && age2 <= 14) {
-                System.out.println("Если возраст ребенка равен " + age2 + ", то ему можно кататься на аттракционе" +
+            else if (age >= 5 && age <= 14) {
+                System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе" +
                         " в сопровождении взрослого");
             }
-            if (age3 > 14) {
-                System.out.println("Если возраст ребенка равен " + age3 + ", то ему можно кататься на аттракционе" +
+            else {
+                System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе" +
                         " без сопровождения взрослого");
             }
-        }
+
 
     }
 
@@ -151,17 +136,34 @@ public class Main {
     public static void task7 () {
         System.out.println("Задача 7");
         int one = 1;
-        int two = 2;
-        int three = 3;
+        int two = 1;
+        int three = 1;
 
-        if (one>two&&one>three){
-            System.out.println(one+" - большее число");
-        } else if (two>one&&two>three){
-            System.out.println(two+" - большее число");
+        if (one>two){
+            if(one>=three){
+                System.out.println("Максимальное число - "+one);
+            } else {
+                System.out.println("Максимальное число - "+three);
+            }
+            }
+        else if (two>one){
+            if(two>=three){
+                System.out.println("Максимальное число - "+two);
+            } else  {
+                System.out.println("Максимальное число - "+three);
+            }
         }
-        else{
-            System.out.println(three+" - большее число");
+        else {
+            if(one>three){
+                System.out.println("Максимальное число - "+one);
+            } else if (three>one) {
+                System.out.println("Максимальное число - "+three);
+            }
+            else {
+                System.out.println("Все 3 числа равны");
+            }
         }
+
     }
 
 
