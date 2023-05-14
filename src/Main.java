@@ -140,7 +140,7 @@ public class Main {
         int three = 1;
 
         if (one>two){
-            if(one>three){
+            if(one>=three){
                 System.out.println("Максимальное число - "+one);
             } else {
                 System.out.println("Максимальное число - "+three);
@@ -154,7 +154,7 @@ public class Main {
             }
         }
         else {
-            if(one>=three){
+            if(one>three){
                 System.out.println("Максимальное число - "+one);
             } else if (three>one) {
                 System.out.println("Максимальное число - "+three);
